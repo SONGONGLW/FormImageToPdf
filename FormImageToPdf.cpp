@@ -20,6 +20,7 @@ FormImageToPdf::FormImageToPdf(const QString &image_path, QWidget *parent)
 
     QDir dir(image_path);
     QFileInfoList fileinfos = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);
+
     //pdf类没提供删除页接口，故先筛选出所有图片确定图片数量
     QStringList images;
     for(auto &it : fileinfos)
